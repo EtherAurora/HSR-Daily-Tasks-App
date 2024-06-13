@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aurora Santos">
+    <title>Star Rail Daily Tasks</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Star Rail Daily Training App">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://127.0.0.1:5500/style.html">
+    <meta property="og:image" content="https://cdn2.steamgriddb.com/icon_thumb/e52da5a31de788599378924f0e639557.png">
+    <meta property="og:description" content="An app to help you with your daily tasks by making them a bit more fun.">
+    <meta property="og:site_name" content="Star Rail Daily Tasks">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="/Icons/Icon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Pendants Section -->
+    <div class="pendants">
+        <div class="pendant-1">
+            <img src="Pendants/Pendant1.png" alt="Pendant 1">
+        </div>
+        <div class="pendant-2">
+            <img src="Pendants/Pendant2.png" alt="Pendant 2">
+        </div>
+        <div class="pendant-3">
+            <img src="Pendants/Pendant3.png" alt="Pendant 3">
+        </div>
+    </div>
+
+    <!-- Kebab Menu -->
+    <div class="kebab-menu">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+
+    <!-- Side Menu -->
+    <div id="side-menu">
+        <button id="close-menu">X</button>
+        <h1>Add Task</h1>
+        <div id="task-creator">
+            <input type="text" id="text-input" placeholder="Enter your task">
+            <button id="save-task">Save Task</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- Secondary Backgrounds -->
+        <div class="secondary-bg"></div>
+        <div class="secondary-bg-white">
+            <img src="Background/PadPageBgDesc.png" alt="Background">
+        </div>
+
+        <!-- Tab Bar -->
+        <div class="tab-bar">
+            <div class="tab-image-container">
+                <img src="Icons/DailyQuestStudyIcon.png" alt="Study Icon" id="study">
+                <img src="Icons/DailyQuestPracticeIcon.png" alt="Practice Icon" id="daily">
+                <img src="Icons/DailyQuestExploreIcon.png" alt="Explore Icon" id="explore">
+            </div>
+        </div>
+
+        <!-- Daily Training Section -->
+        <div class="daily selected">
+            <img src="Icons/DailyQuestPracticeIcon.png" alt="Practice Icon">
+            <p>Daily Training</p>
+        </div>
+        
+        <div class="daily-training">
+            <div class="progress-bar">
+                <div class="Counter" id="Counter">
+                    <img src="Icons/DailyPanelBg.png" width="100%" alt="Daily Panel Background">
+                    <img src="Icons/ActiveIcon.png" width="50%" class="ActiveIcon" alt="Active Icon">
+                    <p id="counter-text">0</p>
+                </div>
+                <input type="range" name="progress-bar" id="progress" class="progress" min="0" max="500" value="0">
+                
+                <!-- Rewards Section -->
+                <div class="rewards">
+                    <div class="reward-0"><p>0</p></div>
+                    <div class="reward-1"><p>100</p></div>
+                    <div class="reward-2"><p>200</p></div>
+                    <div class="reward-3"><p>300</p></div>
+                    <div class="reward-4"><p>400</p></div>
+                    <div class="reward-5"><p>500</p></div>
+                </div>
+                
+                <!-- Tasks Section -->
+                <div class="tasks">
+                    <div id="task-container" class="task-container scroll-container">
+                        <!-- Task items will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- External Script -->
+    <script src="createTask.js" defer></script>
+</body>
+</html>
